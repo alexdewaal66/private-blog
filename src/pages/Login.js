@@ -2,19 +2,26 @@ import React, {useState} from 'react';
 import {useHistory} from "react-router-dom";
 import page from "./page.module.css";
 
-export default function Login({setAuthenticated}) {
+export default function Login({isAuthenticated, setAuthenticated}) {
     const history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     function handleSubmit() {
-        // send to server here
-        if (true || (email === "ik" && password === "ik")) {
+        if (email === "ik@ego.nl" && password === "ik") {
             console.log("INGELOGD!");
             setAuthenticated(true);
             history.push('/blogposts');
         } else {
             console.log("Helaas");
+            /*
+
+
+Login incorrect.
+Only perfect spellers may
+Enter this system.
+             */
+
         }
     }
 

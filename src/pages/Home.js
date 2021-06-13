@@ -31,7 +31,6 @@ function HomePage() {
                 odit perspiciatis placeat
                 provident quos, similique sit totam vero. Beatae consequatur cupiditate rerum?
             </p>
-            <p>Leer <Link to="/tanden-bleken">hier</Link> meer over het bleken van tanden</p>
         </div>
     );
 }

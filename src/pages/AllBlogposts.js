@@ -8,10 +8,6 @@ import {now, useConditionalEffect} from "../helpers/utils";
 export default function AllBlogposts() {
     const [data, setData] = useState(null);
 
-    function handleClickNext() {
-        // history.push("/afspraak-maken");
-    }
-
     function fetchData() {
         console.log(now(), 'in fetchData()');
         console.log(`json:`, json);
@@ -28,7 +24,6 @@ export default function AllBlogposts() {
             {data
                 ? (
                     <>
-                        {/*Geladen: {(data?.length)} stuks*/}
                         {data.map((item) => {
                                 return (
                                     <div
@@ -36,16 +31,14 @@ export default function AllBlogposts() {
                                         key={item.id}
                                     >
                                         <h3 className={page.title}>
-
                                             <Link
                                                 to={{
                                                     pathname: `/blog/${item.id}`,
                                                     state: {item: item}
                                                 }}
                                             >
-                                                #{item.id} -{item.title}
+                                                #{item.id} - {item.title}
                                             </Link>
-
                                         </h3>
                                     </div>
                                 )
@@ -59,10 +52,6 @@ export default function AllBlogposts() {
                     </>
                 )
             }
-
-            <button type="button" onClick={handleClickNext}>
-                Next
-            </button>
         </div>
     );
 };

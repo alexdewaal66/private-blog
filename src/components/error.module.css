@@ -1,0 +1,8 @@
+.centered {
+    border: 1px solid hsla(0, 100%, 50%, 0.20);
+    padding: 2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
